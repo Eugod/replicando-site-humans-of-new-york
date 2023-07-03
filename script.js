@@ -5,7 +5,7 @@ let lorem = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dist
 let ancoras = document.querySelectorAll('.ancora-principal');
 let pLista = document.querySelector('.p-lista');
 let bolinha = document.querySelector('.bolinha');
-let fotoLivro = document.querySelector('.foto-livro')
+let fotoLivro = document.querySelector('.foto-livro');
 
 let trocaImg = (img) => {
     document.querySelector('.bg-img').style.backgroundImage = `url(${img})`;
@@ -91,11 +91,29 @@ fetch('./ultimasHistorias.json')
         const containerPost = document.querySelector('.container-post');
 
         data.forEach(objeto => {
-            containerPost.innerHTML += `<div class="div-historia col-12 col-md-6 col-lg-3 col-xl-3">
+            containerPost.innerHTML += `
+            <div class="div-historia col-12 col-md-6 col-lg-3 col-xl-3">
                 <div class="div-img">
                     <img class="img-fluid" src="${objeto.imagem}">
                 </div>
                 <p>${objeto.texto}</p>
             </div>`
         })
-    })
+    });
+
+fetch('./series.json')
+    .then(response => response.json())
+    .then(data => {
+        const containerUltimaSerie = document.querySelector('.container-ultima-serie');
+
+        const primeiroObjeto = data[0];
+
+        console.log(primeiroObjeto.imagem)
+
+        containerUltimaSerie.innerHTML = `
+        <div class="div-serie d-flex flex-column justify-content-center align-items-center" style="background-image: url(${primeiroObjeto.imagem}); background-size: cover;">
+            <h2 class="fs-5">${primeiroObjeto.nome_do_site}</h2>
+            <p class="p-serie">${primeiroObjeto.nome_da_serie}</p>
+            <button class="btn-series">LER SÉRIE</button>
+        </div>`
+    });

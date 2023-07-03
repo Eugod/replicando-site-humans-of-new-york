@@ -1,0 +1,27 @@
+[
+    {
+        "nome_do_site": "HUMANOS DE NOVA YORK",
+        "nome_da_serie": "Série A",
+        "imagem": "./assets/serie1.jpg"
+    },
+    {
+        "nome_do_site": "HUMANOS DE NOVA YORK",
+        "nome_da_serie": "Série B",
+        "imagem": "https://example.com/imagem2.jpg"
+    },
+    {
+        "nome_do_site": "HUMANOS DE NOVA YORK",
+        "nome_da_serie": "Série C",
+        "imagem": "https://example.com/imagem3.jpg"
+    },
+    {
+        "nome_do_site": "HUMANOS DE NOVA YORK",
+        "nome_da_serie": "Série D",
+        "imagem": "https://example.com/imagem4.jpg"
+    },
+    {
+        "nome_do_site": "HUMANOS DE NOVA YORK",
+        "nome_da_serie": "Série E",
+        "imagem": "https://example.com/imagem5.jpg"
+    }
+]

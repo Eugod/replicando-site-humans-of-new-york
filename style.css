@@ -1,5 +1,5 @@
 body {
-    padding-bottom: 85px;
+    padding-bottom: 79px;
 }
 
 .borda-esquerda,
@@ -138,16 +138,45 @@ header ul {
 .btn-historias {
     margin-top: 44px;
     background-color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: bold;
     padding: 15px 30px;
     border-color: #808080;
-    transition: all 0.4s linear;
 }
 
-.btn-historias:hover {
+.btn-historias,
+.btn-series {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.4s linear;
+    border-width: 1px;
+}
+
+.btn-historias:hover,
+.btn-series:hover {
     background-color: #000000;
     color: #ffffff;
+}
+
+.div-serie {
+    height: 550px;
+}
+
+.p-serie {
+    font-size: 7rem;
+}
+
+.btn-series {
+    padding: 10px 30px;
+    background-color: transparent;
+}
+
+footer {
+    height: 450px;
+    background-color: #000000;
+}
+
+footer p {
+    font-weight: bold;
+    font-size: 3rem;
 }
 
 /* ---------- Navbar ---------- */
@@ -167,7 +196,6 @@ header ul {
 }
 
 .navbar a {
-    color: #ffffff;
     transition: 300ms;
 }
 
@@ -245,6 +273,27 @@ header ul {
 
 /* ---------- Media Querrys ---------- */
 @media (max-width: 1097px) {
+    .div-lista ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ancora-principal {
+        font-size: 4rem;
+    }
+
+    .div-lista ul span {
+        display: none;
+    }
+
+    .p-lista {
+        display: none;
+    }
+
+    .bolinha {
+        top: calc(70%);
+    }
+
     .navbar {
         padding-left: 0;
         padding-right: 0;
@@ -259,6 +308,43 @@ header ul {
 
     .nav-livro {
         display: none;
+    }
+
+    /* ---------- Keyframe Media Querry ---------- */
+    @keyframes bounce {
+        0% {
+            top: calc(70%);
+            animation-timing-function: ease-out;
+        }
+
+        50% {
+            top: calc(70% + 30px);
+
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            top: calc(70%);
+            animation-timing-function: ease-out;
+        }
+    }
+
+    @keyframes bounce2 {
+        0% {
+            top: calc(70%);
+            animation-timing-function: ease-out;
+        }
+
+        50% {
+            top: calc(70% + 30px);
+
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            top: calc(70%);
+            animation-timing-function: ease-out;
+        }
     }
 }
 
@@ -275,5 +361,13 @@ header ul {
 
     .container-navbar {
         flex-direction: row;
+    }
+
+    .itens-navbar {
+        background-color: #000000;
+    }
+
+    .itens-navbar a {
+        color: #ffffff;
     }
 }
