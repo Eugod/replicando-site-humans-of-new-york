@@ -1,5 +1,6 @@
-body {
-    padding-bottom: 79px;
+/* ---------- HTML Home ---------- */
+.html-home {
+    padding-bottom: 85px;
 }
 
 .borda-esquerda,
@@ -8,11 +9,10 @@ body {
 }
 
 /* ---------- Header ---------- */
-header {
+.html-home header {
     height: 100vh;
     display: flex;
     align-items: center;
-
     flex-direction: column;
 }
 
@@ -26,7 +26,7 @@ header {
     justify-content: space-between;
 }
 
-h1 {
+.html-home h1 {
     color: #ffffff;
 }
 
@@ -38,7 +38,7 @@ h1 {
     width: 100%;
 }
 
-header ul {
+.html-home header ul {
     display: flex;
     list-style: none;
     justify-content: center;
@@ -175,6 +175,7 @@ footer {
 }
 
 footer p {
+    text-align: center;
     font-weight: bold;
     font-size: 3rem;
 }
@@ -370,4 +371,65 @@ footer p {
     .itens-navbar a {
         color: #ffffff;
     }
+}
+
+/* ---------- HTML Paises ---------- */
+.html-paises {
+    background-color: #000000;
+}
+
+.html-paises header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image:url('./assets/mapaMundi.jpeg');
+    background-size: cover;
+}
+
+.ul-header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-bottom: 1px solid #ffffff; 
+    padding: 0;
+    margin-top: 10px;
+}
+
+.ul-header a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.2s linear;
+}
+
+.ul-ancora:hover {
+    color: #ee534a;
+}
+
+.ul-div1 {
+    border-left: solid 1px #ffffff;
+    border-top: solid 1px #ffffff;
+    border-right: solid 1px #ffffff;
+}
+
+.ul-div2 {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul-div2 span {
+    background-color: #ffffff;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
 }
