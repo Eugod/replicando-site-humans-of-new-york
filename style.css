@@ -1,0 +1,279 @@
+body {
+    padding-bottom: 85px;
+}
+
+.borda-esquerda,
+.borda-direita {
+    height: 100vh;
+}
+
+/* ---------- Header ---------- */
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.div-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.div-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 90px;
+}
+
+.ancora-principal {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 6rem;
+}
+
+.ancora-principal.underline {
+    text-decoration: underline #ee534a;
+}
+
+.ancora-historias {
+    text-decoration: underline #ee534a;
+}
+
+.espacador {
+    background-color: #ffffff;
+    width: 70px;
+    height: 2px;
+    margin-top: 25px;
+}
+
+.bolinha {
+    position: absolute;
+    top: calc(51%);
+    width: 15px;
+    height: 15px;
+    background-color: #ee534a;
+    border-radius: 50%;
+    animation: none;
+}
+
+.animar1,
+.animar2 {
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.animar1 {
+    animation-name: bounce;
+}
+
+.animar2 {
+    animation-name: bounce2;
+}
+
+.p-lista {
+    width: 50%;
+    text-align: justify;
+    color: #ffffff;
+    font-size: 1.3rem;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.p-lista.fade-out {
+    opacity: 0;
+}
+
+.p-lista.fade-in {
+    opacity: 1;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/livros.jpg);
+    background-size: cover;
+    transition: 1s ease-in-out;
+}
+
+/* ---------- Main ---------- */
+.div-historia {
+    cursor: pointer;
+    text-align: justify;
+}
+
+.div-img {
+    overflow: hidden;
+}
+
+.div-historia img {
+    transition: all 8s linear;
+}
+
+.div-historia:hover img {
+    scale: 1.1;
+}
+
+.btn-historias {
+    margin-top: 44px;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-color: #808080;
+    transition: all 0.4s linear;
+}
+
+.btn-historias:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    padding-left: 15%;
+    padding-right: 30%;
+}
+
+.navbar.visible {
+    transform: translateY(0);
+}
+
+.navbar a {
+    color: #ffffff;
+    transition: 300ms;
+}
+
+.navbar a:hover {
+    color: #ee534a;
+}
+
+.p-nav {
+    width: 100px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.foto-livro {
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    top: -70px;
+    right: 22%;
+    left: auto;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.foto-livro.hidden {
+    opacity: 0;
+}
+
+.bolinha-separacao {
+    width: 6px;
+    height: 6px;
+    background-color: #ee534a;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes bounce {
+    0% {
+        top: calc(51%);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        top: calc(51% + 30px);
+
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        top: calc(51%);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes bounce2 {
+    0% {
+        top: calc(51%);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        top: calc(51% + 30px);
+
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        top: calc(51%);
+        animation-timing-function: ease-out;
+    }
+}
+
+/* ---------- Media Querrys ---------- */
+@media (max-width: 1097px) {
+    .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .container-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nav-livro {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 0;
+    }
+
+    .navbar {
+        bottom: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .container-navbar {
+        flex-direction: row;
+    }
+}
