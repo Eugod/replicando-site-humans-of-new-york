@@ -117,3 +117,16 @@ fetch('./series.json')
             <button class="btn-series">LER SÉRIE</button>
         </div>`
     });
+
+    fetch('./paises.json')
+    .then(response => response.json())
+    .then(data => {
+        const divContainer = document.querySelector('.post-container');
+
+        data.forEach(objeto => {
+            divContainer.innerHTML += `
+            <div class="d-flex justify-content-center align-items-center m-3" style="background-image:url('${objeto.imagem}'); background-size: cover;">
+                <p>${objeto.titulo}</p>
+            </div>`
+        })
+    });

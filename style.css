@@ -376,6 +376,7 @@ footer p {
 /* ---------- HTML Paises ---------- */
 .html-paises {
     background-color: #000000;
+    padding-bottom: 85px;
 }
 
 .html-paises header {
@@ -383,6 +384,7 @@ footer p {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .div-header {
@@ -391,17 +393,18 @@ footer p {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-image:url('./assets/mapaMundi.jpeg');
+    background-image:url('./assets/mapaMundi.jpg');
     background-size: cover;
 }
 
 .ul-header {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     border-bottom: 1px solid #ffffff; 
     padding: 0;
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .ul-header a {
@@ -415,14 +418,17 @@ footer p {
 }
 
 .ul-div1 {
-    border-left: solid 1px #ffffff;
-    border-top: solid 1px #ffffff;
-    border-right: solid 1px #ffffff;
+    border-left: solid 2px #ffffff;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    padding: 10px;
+    width: 130px;
+
 }
 
 .ul-div2 {
     display: flex;
-    width: 30%;
+    width: 250px;
     justify-content: space-between;
     align-items: center;
 }
@@ -432,4 +438,84 @@ footer p {
     width: 4px;
     height: 4px;
     border-radius: 50%;
+}
+
+.div-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.div-titulo h1 {
+    color: #ffffff;
+    font-size: 8rem;
+}
+
+.div-titulo h2 {
+    color: #ffffff;
+    text-align: center;
+    width: 50%;
+}
+
+.div-titulo span {
+    width: 1px;
+    height: 100px;
+    background-color: #979797;
+}
+
+.post-container {
+    width: 60%;
+}
+
+.post-container div {
+    height: 360px;
+    width: 280px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.post-container div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background-color 0.4s ease;
+}
+
+.post-container div:hover::before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.post-container div:hover {
+    transform: scale(1.05);
+}
+
+.post-container p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 999;
+}
+
+/* ---------- Media Querry ---------- */
+@media (max-width: 767px) {
+    .ul-header {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 2168px) {
+    .post-container {
+        width: 50%;
+    }
 }
