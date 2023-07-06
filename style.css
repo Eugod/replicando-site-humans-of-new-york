@@ -393,7 +393,7 @@ footer p {
     align-items: center;
     width: 100%;
     height: 100%;
-    background-image:url('./assets/mapaMundi.jpg');
+    background-image: url('./assets/mapaMundi.jpg');
     background-size: cover;
 }
 
@@ -401,7 +401,7 @@ footer p {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    border-bottom: 1px solid #ffffff; 
+    border-bottom: 1px solid #ffffff;
     padding: 0;
     margin-top: 10px;
     margin-bottom: 0;
@@ -503,8 +503,27 @@ footer p {
 .post-container p {
     color: #ffffff;
     font-weight: bold;
+    padding: 10px;
     font-size: 1.5rem;
     z-index: 999;
+    position: relative;
+}
+
+.post-container div p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    transition: 0.3s ease;
+}
+
+.post-container div:hover p::before {
+    border-color: #ffffff;
+    width: 100%;
+    height: 100%;
 }
 
 /* ---------- Media Querry ---------- */
