@@ -1,4 +1,4 @@
-/* ---------- HTML Home ---------- */
+/* ------------------------------ HTML Home ------------------------------ */
 .html-home {
     padding-bottom: 85px;
 }
@@ -114,6 +114,7 @@
     height: 100%;
     background-image: url(./assets/livros.jpg);
     background-size: cover;
+    background-position: center;
     transition: 1s ease-in-out;
 }
 
@@ -129,6 +130,7 @@
 
 .div-historia img {
     transition: all 8s linear;
+    width: 100%;
 }
 
 .div-historia:hover img {
@@ -158,6 +160,8 @@
 
 .div-serie {
     height: 550px;
+    background-size: cover; 
+    background-position: center;
 }
 
 .p-serie {
@@ -169,6 +173,8 @@
     background-color: transparent;
 }
 
+
+/* ---------- Footer ---------- */
 footer {
     height: 450px;
     background-color: #000000;
@@ -373,12 +379,13 @@ footer p {
     }
 }
 
-/* ---------- HTML Paises ---------- */
+/* ------------------------------ HTML Paises ------------------------------ */
 .html-paises {
     background-color: #000000;
     padding-bottom: 85px;
 }
 
+/* ---------- Header ---------- */
 .html-paises header {
     height: 100vh;
     display: flex;
@@ -467,6 +474,7 @@ footer p {
     background-color: #979797;
 }
 
+/* ---------- Main ---------- */
 .post-container {
     width: 60%;
 }
@@ -536,5 +544,102 @@ footer p {
 @media (min-width: 2168px) {
     .post-container {
         width: 50%;
+    }
+}
+
+/* ------------------------------ HTML Series ------------------------------ */
+.html-series {
+    padding-bottom: 85px;
+}
+
+/* ---------- Header ---------- */
+.html-series header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.div-cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.lista-header {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    border-bottom: 1px solid #000000;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.lista-header a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.98rem;
+    transition: all 0.2s linear;
+}
+
+.lista-ancora:hover {
+    color: #ee534a;
+}
+
+.lista-div1 {
+    border-left: solid 1px #000000;
+    border-top: solid 1px #000000;
+    border-right: solid 1px #000000;
+    padding: 10px;
+    width: 130px;
+
+}
+
+.lista-div2 {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-div2 span {
+    background-color: #000000;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+.div-titulo-serie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.div-titulo-serie h1 {
+    font-size: 1.5rem;
+}
+
+.div-titulo-serie h2 {
+    font-size: 8rem;
+    padding-bottom: 30px;
+}
+
+.div-titulo-serie h3 {
+    font-size: 1.5rem;
+    width: 50%;
+    text-align: center;
+}
+
+/* ---------- Media Querry ---------- */
+@media (max-width: 767px) {
+    .lista-header {
+        justify-content: center;
     }
 }

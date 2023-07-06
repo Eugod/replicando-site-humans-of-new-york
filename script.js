@@ -111,22 +111,43 @@ fetch('./series.json')
         console.log(primeiroObjeto.imagem)
 
         containerUltimaSerie.innerHTML = `
-        <div class="div-serie d-flex flex-column justify-content-center align-items-center" style="background-image: url(${primeiroObjeto.imagem}); background-size: cover;">
+        <div class="div-serie d-flex flex-column justify-content-center align-items-center" style="background-image: url(${primeiroObjeto.imagem});">
             <h2 class="fs-5">${primeiroObjeto.nome_do_site}</h2>
             <p class="p-serie">${primeiroObjeto.nome_da_serie}</p>
             <button class="btn-series">LER SÉRIE</button>
         </div>`
     });
 
-    fetch('./paises.json')
+
+
+/* ------------------------------ HTML Paises ------------------------------ */
+fetch('./paises.json')
     .then(response => response.json())
     .then(data => {
         const divContainer = document.querySelector('.post-container');
 
         data.forEach(objeto => {
             divContainer.innerHTML += `
-            <div class="d-flex justify-content-center align-items-center m-3" style="background-image:url('${objeto.imagem}'); background-size: cover;">
+            <div class="d-flex justify-content-center align-items-center m-3" style="background-image:url('${objeto.imagem}'); background-size: cover; background-position: center;">
                 <p>${objeto.titulo}</p>
+            </div>`
+        })
+    });
+
+
+
+/* ------------------------------ HTML Series ------------------------------ */
+fetch('./series.json')
+    .then(response => response.json())
+    .then(data => {
+        const containerPostagem = document.querySelector('.container-postagem');
+
+        data.forEach(objeto => {
+            containerPostagem.innerHTML += `
+            <div class="div-serie d-flex flex-column justify-content-center align-items-center" style="background-image: url(${objeto.imagem}); ">
+                <h2 class="fs-5">${objeto.nome_do_site}</h2>
+                <p class="p-serie">${objeto.nome_da_serie}</p>
+                <button class="btn-series">LER SÉRIE</button>
             </div>`
         })
     });
